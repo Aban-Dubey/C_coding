@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 void call_by_value(int m, int n) //the copy of actual parameters is used to perform operations
 {
 	m = m+n;
@@ -14,6 +15,7 @@ void call_by_ref(int *a, int *b) //operations are performed on the values at add
 
 void main()
 {
+	system("color f0");
 	int x,y;
 	printf("Enter the value of x = \n");
 	scanf("%d",&x);
@@ -23,5 +25,4 @@ void main()
 	printf("The values of x and y after calling call by value are = %d %d \n",x,y);
 	call_by_ref(&x,&y); //original values of x and y are altered
 	printf("The values of x and y after calling call by reference are = %d %d \n",x,y);
-	printf("%d %d",x,y);
 }
